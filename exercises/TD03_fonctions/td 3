@@ -35,7 +35,7 @@ def afficheTemps(temps):
     affichePluriel(temps[1], "heure")
     affichePluriel(temps[2], "minute")
     affichePluriel (temps[3], "seconde")
-    print("")
+    print("\n")
 afficheTemps((1,0,14,23)) 
 
 def demandeTemps():
@@ -53,7 +53,84 @@ def demandeTemps():
 
 afficheTemps(demandeTemps())
 
-def sommeTemps(temps1,temps2):
-    return int(temps1) + int(temps2)
 
-sommeTemps((2,3,4,25),(5,22,57,1))
+
+
+
+def sommeTemps(temps1,temps2):
+    return secondeEnTemps(tempsEnSeconde(temps1)+tempsEnSeconde(temps2))
+
+afficheTemps(sommeTemps((2,3,4,25),(5,22,57,1)))
+
+
+
+
+
+def proportionTemps(temps,proportion):
+    return secondeEnTemps(int(tempsEnSeconde(temps)*proportion))
+
+afficheTemps(proportionTemps((2,0,36,0),0.2))
+#appeler la fonction en échangeant l'ordre des arguments
+
+
+
+
+def tempsEnDate(temps):
+    jour, heure, min, sec = temps
+    annee = jour // 365 + 1970 
+    jour = jour%365
+    return ( annee, jour, heure, min, sec)
+
+
+def afficheDate(date = -1):
+    annee, jour, heure, min, sec = date 
+    print("annee", annee, end= " ")
+    afficheTemps((jour, heure, min,sec))
+
+import time 
+print(time.time()) #temps écoulé depuis le 1er janvier 1970
+print(time.gmtime(time.time())) #affiche le temps en année, jour, heure, min, sec
+  
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+afficheDate(tempsEnDate(temps))
+afficheDate()
+
+
+
+
+
+
+def bisextile(jour):
+    pass
+        
+bisextile(20000)
+
+
+
+
+
+
+def nombreBisextile(jour):
+    pass
+
+
+def tempsEnDateBisextile(temps):
+    pass
+   
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+afficheDate(tempsEnDateBisextile(temps))
+
+
+
+
+
+
+
+def verifie(liste_temps):
+    pass
+
+
+liste_temps = [[1,2,39,34],[0,1,9,4],[0,29,39,51],[0,31,13,46]]
+verifie(liste_temps)  
