@@ -42,6 +42,12 @@ listeAlt= [altMax(i) for i in range(1,10001)]
 altMaxliste= max(listeAlt)
 entierMax = listeAlt.index(altMaxliste)+1
 
+
+
+
+
+
+
 carre_mag = [[4, 14, 15, 1], [9, 7, 6, 12], [5,11, 10, 8],[16, 2, 3, 13]]
 
 carre_mag[0][1]
