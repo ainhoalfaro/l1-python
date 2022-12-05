@@ -1,0 +1,12 @@
+#ex 1 
+
+l=[1,2,3,4,5]
+n= 0 
+
+def superieur(Liste, nombre):
+    nb = 0 
+    for i in Liste:
+        if i>n:
+            nb+=1
+        return nb 
+    print ( superieur (l,n))
